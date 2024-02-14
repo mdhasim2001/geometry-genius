@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry genius</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="p-5 lg:p-10">
+    <header class="flex items-center justify-between bg-[#1090D81A] p-5 mb-10 rounded-lg">
+        <div>
+            <h1 class="font-bold text-2xl">Intaractive</h1>
+            <p class="text-[14px]">Geometry Genius</p>
+        </div>
+        <button class="px-5 py-2  bg-[#1090D8] rounded-lg text-white">Blog</button>
+    </header>
+    <main class="lg:flex gap-5">
+        <div class="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <!-- item 1 -->
+            <div class="card flex flex-col justify-center items-center p-5 space-y-5">
+                <img class="h-44" src="images/triangle.png" alt="">
+                <h1 class="font-bold">Triangle</h1>
+                <p>Area (A) = 0.5 x b x h</p>
+                <div class="flex items-center justify-center w-full text-center space-x-2">
+                    <input id="width-push" class="w-[80px] rounded-md px-2 py-1" type="text" placeholder="b">
+                    <span>cm</span>
+                    <input id="height-push" class="w-[80px] px-2 py-1 rounded-md" type="text" placeholder="h">
+                    <span>cm</span>
+                </div>
+                <p>Triangle <span id="push1"></span>cm<sup>2</sup></p>
+                <button onclick="calculet1()" class="w-full py-2 bg-blue-700 rounded-lg text-white">Calculate</button>
+            </div>
+            <!-- item 2 -->
+            <div class="card flex flex-col justify-center items-center p-5 space-y-5">
+                <img class="h-44" src="images/rectangle.png" alt="">
+                <h1 class="font-bold">Rectangle</h1>
+                <p>Area (A) = w x l</p>
+                <div class="flex items-center justify-center w-full text-center space-x-2">
+                    <input id="width-push2" class="w-[80px] px-2 py-1 rounded-md" type="text" placeholder="w">
+                    <span>cm</span>
+                    <input id="height-push2" class="w-[80px] px-2 py-1 rounded-md" type="text" placeholder="l">
+                    <span>cm</span>
+                </div>
+                <p>Triangle <span id="push2"></span>cm<sup>2</sup></p>
+                <button onclick="calculet2()" class="w-full py-2 bg-blue-700 rounded-lg text-white">Calculate</button>
+            </div>
+            <!-- item 3 -->
+            <div class="card flex flex-col justify-center items-center p-5 space-y-5">
+                <img class="h-44" src="images/parallelogram.png" alt="">
+                <h1 class="font-bold">Parallelogram</h1>
+                <p>Area (A) = b x h</p>
+                <div class="flex items-center justify-center w-full text-center space-x-2">
+                    <input id="width-push3" class="w-[80px] px-2 py-1 rounded-md" type="text" placeholder="b">
+                    <span>cm</span>
+                    <input id="height-push3" class="w-[80px] px-2 py-1 rounded-md" type="text" placeholder="h">
+                    <span>cm</span>
+                </div>
+                <p>Triangle <span id="push3"></span>cm<sup>2</sup></p>
+                <button onclick="calculet3()" class="w-full py-2 bg-blue-700 rounded-lg text-white">Calculate</button>
+            </div>
+            <!-- item 4 -->
+            <div class="card flex flex-col justify-center items-center p-5 space-y-5">
+                <img class="h-44" src="images/rhombus.png" alt="">
+                <h1 class="font-bold">Rhombus</h1>
+                <p>Area (A) = 0.5 x b<sub>1</sub> x b<sub>1</sub></p>
+                <div class="flex items-center justify-center w-full text-center space-x-2">
+                    <input id="width-push4" class="w-[80px] px-2 py-1 rounded-md" type="text" placeholder="b">
+                    <span>cm</span>
+                    <input id="height-push4" class="w-[80px] px-2 py-1 rounded-md" type="text" placeholder="b">
+                    <span>cm</span>
+                </div>
+                <p>Triangle <span id="push4"></span>cm<sup>2</sup></p>
+                <button onclick="calculet4()" class="w-full py-2 bg-blue-700 rounded-lg text-white">Calculate</button>
+            </div>
+            <!-- item 5 -->
+            <div class="card flex flex-col justify-center items-center p-5 space-y-5">
+                <img class="h-44" src="images/pentagon.png" alt="">
+                <h1 class="font-bold">Pentagon</h1>
+                <p>Area (A) = 0.5 x p x b</p>
+                <div class="flex items-center justify-center w-full text-center space-x-2">
+                    <input id="width-push5" class="w-[80px] px-2 py-1 rounded-md" type="text" placeholder="p">
+                    <span>cm</span>
+                    <input id="height-push5" class="w-[80px] px-2 py-1 rounded-md" type="text" placeholder="b">
+                    <span>cm</span>
+                </div>
+                <p>Triangle <span id="push5"></span>cm<sup>2</sup></p>
+                <button onclick="calculet5()" class="w-full py-2 bg-blue-700 rounded-lg text-white">Calculate</button>
+            </div>
+            <!-- item 6 -->
+            <div class="card flex flex-col justify-center items-center p-5 space-y-5">
+                <img class="h-44" src="images/ellipse.png" alt="">
+                <h1 class="font-bold">Ellipse</h1>
+                <p>Area (A) = πab</p>
+                <div class="flex items-center justify-center w-full text-center space-x-2">
+                    <input id="width-push6" class=" w-[80px] px-2 py-1 rounded-md" type="text" placeholder="a">
+                    <span>cm</span>
+                    <input id="height-push6" class="w-[80px] px-2 py-1 rounded-md" type="text" placeholder="b">
+                    <span>cm</span>
+                </div>
+                <p>Triangle <span id="push6"></span>cm<sup>2</sup></p>
+                <button onclick="calculet6()" class="w-full py-2 bg-blue-700 rounded-lg text-white">Calculate</button>
+            </div>
+
+        </div>
+        <div class="card w-72 text-center p-5">
+            <h1 class="font-bold">Area Calculation</h1>
+        </div>
+    </main>
+
+    <script src="JS/function.js"></script>
+    <script src="JS/app.js"></script>
+</body>
+
+</html>
